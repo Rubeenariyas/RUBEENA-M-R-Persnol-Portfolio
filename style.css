@@ -164,7 +164,8 @@ ul {
     transform: translateX(-50%);
     z-index: 1000;
     width: 95%;
-    max-width: 1000px;
+    max-width: 1100px;
+    /* Expanded for 7 links */
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -179,6 +180,13 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.nav-brand {
+    flex: 1;
+    /* Pushes links to center */
+    display: flex;
+    align-items: center;
 }
 
 /* 1️⃣ Brand Unit */
@@ -199,17 +207,23 @@ ul {
 /* 2️⃣ Navigation Center */
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 18px;
+    /* Balanced density */
     align-items: center;
+    justify-content: center;
+    flex: 2;
+    /* Takes more space to stay centered */
 }
 
 .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    /* Slightly smaller for fit */
     font-weight: 500;
     color: var(--text-secondary);
     position: relative;
-    padding: 8px 12px;
+    padding: 8px 10px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -243,7 +257,10 @@ ul {
 .nav-action {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 15px;
+    flex: 1;
+    /* Match brand unit for centering */
 }
 
 .btn-nav-resume {
@@ -618,7 +635,7 @@ ul {
 }
 
 /* --- Responsive Redesign --- */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .nav-links {
         display: none;
     }
