@@ -4,285 +4,612 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubeena M R | Data Scientist Portfolio</title>
+    <title>Rubeena M R | Data Scientist</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap"
         rel="stylesheet">
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Style -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navbar -->
+    <!-- Floating Glass Nav -->
     <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Rubeena.</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+        <div class="nav-container">
+            <!-- 1️⃣ Brand Unit -->
+            <div class="nav-brand">
+                <a href="#" class="logo">Rubeena<span>.</span></a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+
+            <!-- 2️⃣ Navigation Items (Center) -->
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+
+            <!-- 3️⃣ Action Unit -->
+            <div class="nav-action">
+                <a href="RESUME/RUBEENA M R_ RESUME (2).pdf" target="_blank" class="btn-nav-resume">
+                    Resume <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay">
+        <div class="mobile-drawer">
+            <div class="drawer-header">
+                <div class="logo">Rubeena<span>.</span></div>
+                <div class="close-menu" id="close-menu"><i class="fas fa-times"></i></div>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <span class="greeting">Available for Work</span>
-                <h1 class="name">Rubeena M R</h1>
-                <h2 class="role">Data Scientist & Analyst</h2>
-                <div class="location">
-                    <i class="fas fa-map-marker-alt" style="color:var(--primary-color)"></i> Kochi, Kerala, India
+    <section class="hero">
+        <div class="container hero-grid">
+            <!-- Left Text -->
+            <div class="hero-text fade-in-up">
+                <h1 class="hero-name">Rubeena M R</h1>
+                <h2 class="hero-title">Data Scientist | <span style="color: var(--neon-orange);">Python Developer</span>
+                </h2>
+
+                <div class="timestamp-badge" style="margin-bottom: 30px;">
+                    <i class="fas fa-map-marker-alt"></i> Kochi, Kerala, India
                 </div>
+
+                <p class="hero-summary">
+                    Data-driven professional with expertise in Python, machine learning, and visualization.
+                    Building end-to-end data solutions focused on delivering actionable insights.
+                </p>
+
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
-                    <a href="RESUME\RUBEENA M R_ RESUME (2).pdf" target="_blank" class="btn btn-outline">Resume <i
-                            class="fas fa-arrow-right" style="margin-left:8px; font-size:0.8em"></i></a>
+                    <a href="#contact" class="btn btn-primary">Let's Talk <i class="fas fa-arrow-right"></i></a>
+                    <a href="RESUME/RUBEENA M R_ RESUME (2).pdf" target="_blank" class="btn btn-secondary">
+                        Resume <i class="fas fa-download"></i>
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-img-container">
-                    <img src="images/profile.jpg" alt="Rubeena M R">
-                </div>
+
+            <!-- Right Image Bubble -->
+            <div class="hero-img-bubble"
+                style="border: 1px solid var(--neon-border); box-shadow: 0 0 30px rgba(255, 138, 0, 0.1);">
+                <img src="images/profile.jpg" alt="Rubeena M R Profile">
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- About Me -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a motivated <strong>Data Scientist / Data Analyst</strong> fresher passionate about data,
-                        actively preparing for interviews, and eager to apply analytical skills to real-world problems.
-                    </p>
-                    <p>
-                        With a background in <strong>Computer Applications (BCA)</strong> and a specialized 6-month
-                        certification in Data Science, I have built a strong foundation in Python, SQL, and Machine
-                        Learning.
-                    </p>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="label">Education</span>
-                            <div class="value">Bachelor of Computer Applications (BCA)</div>
-                            <div
-                                style="font-size: 0.95rem; color: var(--text-primary); margin: 8px 0; font-weight: 500;">
-                                CGPA: 7.9 / 10 <span style="opacity: 0.6;">|</span> A Grade
-                            </div>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">
-                                Strong foundation in Software Development, Database Management Systems, and Web
-                                Technologies.
-                            </p>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Certification</span>
-                            <div class="value">Certified Data Scientist (NSDC)</div>
-                            <div
-                                style="font-size: 0.95rem; color: var(--text-primary); margin: 8px 0; font-weight: 500;">
-                                Grade: A
-                            </div>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">
-                                Specialized 6-month training covering Statistical Analysis, Machine Learning algorithms,
-                                and Data Visualization using Python.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-head">
+                <span style="color: var(--neon-orange);">Introduction</span>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="glass-card">
+                <p>
+                    I am a Data Scientist and Python Developer with a strong academic foundation in Computer
+                    Applications and hands-on experience in data analysis, machine learning, and recommendation systems.
+                </p>
+                <p>
+                    I enjoy working with real-world datasets to extract insights, build predictive models, and create
+                    user-focused solutions. My experience includes supply chain forecasting, image-based recommendation
+                    systems, and full-stack application development.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section skills">
+    <section id="skills">
         <div class="container">
-            <h2 class="section-title">Expertise</h2>
+            <div class="section-head">
+                <span>Expertise</span>
+                <h2>Technical Skills</h2>
+            </div>
+
             <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="icon"><i class="fab fa-python"></i></div>
-                    <h3>Data Analysis</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>Data Cleaning & Preprocessing</li>
-                        <li>Feature Engineering</li>
-                    </ul>
+                <!-- 1. Programming & Analysis -->
+                <div class="bubble-card">
+                    <h3 class="skill-category-title"><i class="fab fa-python"></i> Programming & Analysis</h3>
+                    <div class="skill-tags">
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Python</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">SQL</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Pandas</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">NumPy</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="icon"><i class="fas fa-database"></i></div>
-                    <h3>Databases</h3>
-                    <ul class="skill-list">
-                        <li>SQL</li>
-                        <li>MySQL</li>
-                        <li>MongoDB</li>
-                        <li>Data Warehousing Concepts</li>
-                    </ul>
+
+                <!-- 2. Data Engineering -->
+                <div class="bubble-card">
+                    <h3 class="skill-category-title"><i class="fas fa-cogs"></i> Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">ETL
+                            Pipelines</span>
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">Data
+                            Cleaning</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Transformation</span>
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">Feature
+                            Engineering</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="icon"><i class="fas fa-brain"></i></div>
-                    <h3>Machine Learning</h3>
-                    <ul class="skill-list">
-                        <li>Regression & Classification</li>
-                        <li>Scikit-Learn</li>
-                        <li>Model Evaluation</li>
-                        <li>Basic NLP & Computer Vision</li>
-                    </ul>
+
+                <!-- 3. Machine Learning -->
+                <div class="bubble-card">
+                    <h3 class="skill-category-title"><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Scikit-learn</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Regression</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Classification</span>
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">Model
+                            Validation</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="icon"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Visualization</h3>
-                    <ul class="skill-list">
-                        <li>Power BI (DAX)</li>
-                        <li>Excel & Dashboards</li>
-                        <li>Data Storytelling</li>
-                    </ul>
+
+                <!-- 4. NLP & CV -->
+                <div class="bubble-card">
+                    <h3 class="skill-category-title"><i class="fas fa-eye"></i> NLP & Vision</h3>
+                    <div class="skill-tags">
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">spaCy</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">NLTK</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">OpenCV</span>
+                    </div>
+                </div>
+
+                <!-- 5. Visualization -->
+                <div class="bubble-card">
+                    <h3 class="skill-category-title"><i class="fas fa-chart-bar"></i> Visualization & BI</h3>
+                    <div class="skill-tags">
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">Power
+                            BI</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">DAX</span>
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">Excel
+                            Dashboards</span>
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">Power
+                            Query</span>
+                    </div>
+                </div>
+
+                <!-- 6. Tools -->
+                <div class="bubble-card">
+                    <h3 class="skill-category-title"><i class="fas fa-tools"></i> Databases & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">MySQL</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">MongoDB</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">Git</span>
+                        <span class="tag"
+                            style="color: var(--neon-orange); border-color: var(--neon-orange);">GitHub</span>
+                        <span class="tag" style="color: var(--neon-orange); border-color: var(--neon-orange);">VS
+                            Code</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects">
+    <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
+            <div class="section-head">
+                <span>Portfolio</span>
+                <h2>Featured Projects</h2>
+            </div>
 
-                <!-- Project 1: Supply Chain -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Supply Chain Forecasting</h3>
-                        <p class="project-desc">Forecasting demand and optimizing supply chain decisions using data
-                            analysis and machine learning.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>ML</span>
-                            <span>Forecasting</span>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+
+                <!-- Project 1 -->
+                <article class="bubble-card project-card">
+                    <div class="project-meta">
+                        <span class="timestamp-badge theme-purple">Individual Project</span>
+                        <span class="timestamp-badge theme-cyan">2025</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 12px;">Supply Chain Forecasting</h3>
+                    <div class="project-tech">
+                        <span class="mini-badge"
+                            style="border-color: var(--neon-cyan); color: var(--neon-cyan);">Python</span>
+                        <span class="mini-badge">Pandas</span>
+                        <span class="mini-badge">Scikit-Learn</span>
+                    </div>
+                    <p class="project-desc">Developed a data-driven supply chain forecasting system to analyze sales
+                        trends and predict demand.</p>
+                    <a href="#" class="btn btn-secondary"
+                        style="margin-top:auto; width: 100%; justify-content:center;">GitHub Project Link</a>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="bubble-card project-card">
+                    <div class="project-meta">
+                        <span class="project-type">Individual Project</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem;">Fashion Rec. System</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">TensorFlow</span>
+                        <span class="tech-pill">OpenCV</span>
+                        <span class="tech-pill">ResNet50</span>
+                    </div>
+                    <p class="project-desc">Designed an image-based fashion recommendation system focused on
+                        personalization and performance.</p>
+                    <ul class="project-points">
+                        <li>Processed 500+ product images using ResNet50 embeddings.</li>
+                        <li>Built a KNN-based engine with 94% retrieval accuracy.</li>
+                        <li>Reduced image processing time from 1.5s to 0.4s.</li>
+                    </ul>
+                    <a href="https://github.com/Rubeenariyas/Fashion-Recommendation-System" target="_blank"
+                        class="btn btn-secondary" style="margin-top:auto; width: 100%; justify-content:center;">GitHub
+                        Project Link</a>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="bubble-card project-card">
+                    <div class="project-meta">
+                        <span class="project-type">Team Size: 4</span>
+                    </div>
+                    <h3 style="font-size: 1.4rem;">College Management Sys.</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">PHP</span>
+                        <span class="tech-pill">MySQL</span>
+                        <span class="tech-pill">Bootstrap</span>
+                    </div>
+                    <p class="project-desc">Built a full-stack web application to manage academic and administrative
+                        operations.</p>
+                    <ul class="project-points">
+                        <li>Developed role-based authentication ensuring secure access.</li>
+                        <li>Optmized database schema, improving query performance by 35%.</li>
+                        <li>Designed attendance and course allocation systems.</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary"
+                        style="margin-top:auto; width: 100%; justify-content:center;">GitHub Project Link</a>
+                </article>
+
+                <!-- Project 4: More on GitHub -->
+                <article class="bubble-card project-card"
+                    style="text-align: center; align-items: center; justify-content: center;">
+                    <div style="font-size: 3rem; color: var(--text-muted); margin-bottom: 20px;">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">More Projects</h3>
+                    <p class="project-desc" style="text-align: center; margin-bottom: 30px;">
+                        Explore my full repository of data analysis scripts, machine learning models, and web apps.
+                    </p>
+                    <a href="https://github.com/Rubeenariyas" target="_blank" class="btn btn-primary">
+                        Visit GitHub Profile <i class="fas fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section (SPLIT GRID LAYOUT) -->
+    <section id="achievements">
+        <div class="container">
+            <div class="resume-container-split">
+
+                <!-- TOP HERO: Achievements (Centered) -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="section-head" style="text-align: center;">
+                        <span style="color: var(--neon-cyan); letter-spacing: 1px;">Top Honors</span>
+                        <h3 style="font-size: 2.2rem; margin-top: 5px;">Featured Achievements</h3>
+                    </div>
+
+                    <div class="achievements-hero-stack"
+                        style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; width: 100%; max-width: 1100px;">
+
+                        <!-- Achievement 1: BCA Topper -->
+                        <article class="neon-card featured-neon-card"
+                            style="flex: 1; min-width: 320px; max-width: 480px;">
+                            <div class="featured-subtitle">Academic Excellence</div>
+                            <h3 class="featured-title">BCA Topper Reward</h3>
+                            <div class="featured-img-frame" style="max-height: 160px;">
+                                <img src="images/achievement.jpg" alt="BCA Topper Award">
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px;">
+                                Recognized as the Best Student for academic excellence and securing the highest standing
+                                in the program.
+                            </p>
+                            <div style="display: flex; justify-content: center; gap: 10px;">
+                                <i class="fas fa-medal" style="color: var(--neon-cyan); font-size: 1.5rem;"></i>
+                                <i class="fas fa-star" style="color: var(--neon-orange); font-size: 1.5rem;"></i>
+                            </div>
+                        </article>
+
+                        <!-- Achievement 2: CMS Project (Very Important) -->
+                        <article class="neon-card featured-neon-card"
+                            style="flex: 1; min-width: 320px; max-width: 480px; border-color: rgba(6, 182, 212, 0.3);">
+                            <div class="featured-subtitle"
+                                style="background: rgba(6, 182, 212, 0.1); color: var(--neon-cyan); border-color: rgba(6, 182, 212, 0.3);">
+                                Technical Milestone</div>
+                            <h3 class="featured-title">College Management System</h3>
+                            <div
+                                style="color: var(--neon-cyan); font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; text-transform: uppercase;">
+                                Al Ameen Medical College</div>
+                            <div class="featured-img-frame">
+                                <img src="images/cms_project.jpg" alt="College Management System">
+                            </div>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px; text-align: left; line-height: 1.5;">
+                                Contributed to a real-world web application for academic workflows. Architected
+                                department portals and gathered requirements from stakeholders.
+                            </p>
+                            <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                                <span class="mini-badge"
+                                    style="color: var(--neon-cyan); border-color: var(--neon-cyan);">PHP</span>
+                                <span class="mini-badge"
+                                    style="color: var(--neon-purple); border-color: var(--neon-purple);">MySQL</span>
+                                <span class="mini-badge"
+                                    style="color: var(--neon-orange); border-color: var(--neon-orange);">Bootstrap</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- MAIN SECTION: Education Timeline (Full Width Zigzag) -->
+                <div style="margin-bottom: 80px;">
+                    <div class="section-head" style="margin-bottom: 40px; text-align: center;">
+                        <span style="color: var(--neon-cyan); letter-spacing: 1px;">Academic Journey</span>
+                        <h3 style="font-size: 2.2rem; margin-top: 5px;">Education Timeline</h3>
+                    </div>
+
+                    <div class="compact-timeline">
+                        <div class="timeline-axis"></div>
+
+                        <!-- Item 1: Internship (Left) -->
+                        <div class="compact-row left">
+                            <div class="compact-dot theme-purple"></div>
+                            <div class="compact-content-wrapper">
+                                <div class="timeline-card theme-purple">
+                                    <div class="timestamp-badge">May 2025 – Dec 2025</div>
+                                    <div class="edu-degree">Data Science Intern</div>
+                                    <div class="edu-school">Aesthetic EduTech</div>
+                                    <div class="skill-badges-mini" style="margin-top: 8px;">
+                                        <span class="mini-badge">Python</span>
+                                        <span class="mini-badge">ML</span>
+                                        <span class="mini-badge">Pandas</span>
+                                        <span class="mini-badge">Viz</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <br>
-                        <a href="https://supplychain-forecast-app-w1o3.onrender.com/" target="_blank"
-                            class="btn-outline" style="padding: 8px 16px; border-radius:8px; font-size:0.85rem">Live
-                            Demo</a>
-                    </div>
-                </article>
 
-                <!-- Project 2: Fashion Rec -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Fashion Recommendation</h3>
-                        <p class="project-desc">Image-based fashion recommender system using embeddings and KNN to
-                            suggest similar apparel.</p>
-                        <div class="project-tags">
-                            <span>TensorFlow</span>
-                            <span>OpenCV</span>
-                            <span>KNN</span>
+                        <!-- Item 2: BCA (Right) -->
+                        <div class="compact-row right">
+                            <div class="compact-dot theme-cyan"></div>
+                            <div class="compact-content-wrapper">
+                                <div class="timeline-card theme-cyan">
+                                    <div class="timestamp-badge">2022 – 2025</div>
+                                    <div class="edu-degree">Bachelor of Computer Applications</div>
+                                    <div class="edu-school">Mahatma Gandhi University</div>
+                                    <div class="edu-meta">CGPA: 7.9</div>
+                                    <div class="skill-badges-mini" style="margin-top: 5px;">
+                                        <span class="mini-badge"
+                                            style="color: var(--neon-cyan); border-color: var(--neon-cyan);">Grade:
+                                            A</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <br>
-                        <a href="https://github.com/Rubeenariyas/Fashion-Recommendation-System" target="_blank"
-                            class="btn-outline"
-                            style="padding: 8px 16px; border-radius:8px; font-size:0.85rem">GitHub</a>
-                    </div>
-                </article>
 
-                <!-- Project 3: GitHub More -->
-                <article class="project-card">
-                    <div class="project-content"
-                        style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                        <i class="fab fa-github"
-                            style="font-size: 3rem; margin-bottom: 15px; color: var(--text-muted)"></i>
-                        <h3 class="project-title">More Projects</h3>
-                        <p class="project-desc" style="text-align: center;">Explore my other Analysis and Machine
-                            Learning repositories on GitHub.</p>
-                        <br>
-                        <a href="https://github.com/Rubeenariyas" target="_blank" class="btn-primary"
-                            style="padding: 10px 24px; font-size:0.9rem">View Profile</a>
+                        <!-- Item 3: Higher Sec (Left) -->
+                        <div class="compact-row left">
+                            <div class="compact-dot theme-orange"></div>
+                            <div class="compact-content-wrapper">
+                                <div class="timeline-card theme-orange">
+                                    <div class="timestamp-badge">2020 – 2022</div>
+                                    <div class="edu-degree">Higher Secondary – CS</div>
+                                    <div class="edu-school">St. Francis HSS, Aluva</div>
+                                    <div class="skill-badges-mini" style="margin-top: 5px;">
+                                        <span class="mini-badge"
+                                            style="color: var(--neon-orange); border-color: var(--neon-orange);">CGPA:
+                                            9.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: SSLC (Right) -->
+                        <div class="compact-row right">
+                            <div class="compact-dot theme-green"></div>
+                            <div class="compact-content-wrapper">
+                                <div class="timeline-card theme-green">
+                                    <div class="timestamp-badge">2020</div>
+                                    <div class="edu-degree">SSLC (Class X)</div>
+                                    <div class="edu-school">St. Francis Higher Secondary School</div>
+                                    <div class="skill-badges-mini" style="margin-top: 5px;">
+                                        <span class="mini-badge"
+                                            style="color: var(--neon-green); border-color: var(--neon-green);">CGPA:
+                                            9.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- ROW 2: Certifications (40%) + Leadership (60%) -->
+                <div class="resume-grid-row grid-40-60 fade-in-up">
+
+                    <!-- Col 1: Certifications -->
+                    <div class="neon-card">
+                        <div class="section-head" style="margin-bottom: 30px; text-align: left;">
+                            <span>Credentials</span>
+                            <h3>Certifications</h3>
+                        </div>
+
+                        <div class="certs-stack">
+                            <!-- Cert 1 -->
+                            <div class="cert-item-glass">
+                                <div class="cert-info">
+                                    <h4>Data Annotator</h4>
+                                    <span>IIB NSDC</span>
+                                </div>
+                                <div class="cert-year">2025</div>
+                            </div>
+
+                            <!-- Cert 2 -->
+                            <div class="cert-item-glass">
+                                <div class="cert-info">
+                                    <h4>Data Analytics</h4>
+                                    <span>Skillspark & ASAP</span>
+                                </div>
+                                <div class="cert-year">2025</div>
+                            </div>
+
+                            <!-- Cert 3 -->
+                            <div class="cert-item-glass">
+                                <div class="cert-info">
+                                    <h4>College CMS Project</h4>
+                                    <span>Al Ameen College</span>
+                                </div>
+                                <div class="cert-year">2024</div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-secondary"
+                            style="width: 100%; margin-top: 25px; justify-content: center;">View All Certificates</a>
+                    </div>
+
+                    <!-- Col 2: Leadership & Volunteering -->
+                    <div class="neon-card" style="display: flex; flex-direction: column; justify-content: center;">
+                        <div class="section-head" style="margin-bottom: 20px; text-align: left;">
+                            <span>Beyond Academics</span>
+                            <h3>Leadership & Volunteering</h3>
+                        </div>
+
+                        <div style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.2rem; color: #fff; margin-bottom: 10px;">NSS Volunteer</h4>
+                                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                                    Active National Service Scheme volunteer, leading community service initiatives and
+                                    organizing social awareness camps. Developed strong leadership and team-building
+                                    skills.
+                                </p>
+                                <div style="display: flex; gap: 10px;">
+                                    <span class="tag">Leadership</span>
+                                    <span class="tag">Community Service</span>
+                                    <span class="tag">Event Management</span>
+                                </div>
+                            </div>
+                            <div
+                                style="width: 120px; height: 120px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid var(--neon-orange);">
+                                <i class="fas fa-hands-helping"
+                                    style="font-size: 2.5rem; color: var(--neon-orange);"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section achievements">
+    <!-- Professional Skills (Soft Skills) -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievement-card">
-                <div class="achievement-img">
-                    <img src="images/achievement.jpg" alt="BCA Best Student Award">
-                </div>
-                <div class="achievement-info">
-                    <h3>BCA Topper (Best Student Award)</h3>
-                    <p style="margin-top:20px; color: #ccc">Awarded for consistent academic excellence and outstanding
-                        performance throughout the Bachelor of Computer Applications program.</p>
+            <div class="bubble-card" style="text-align: center;">
+                <h3 style="margin-bottom: 20px;">Professional Soft Skills</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                    <span class="tag" style="background: rgba(234,88,12,0.05); color: var(--text-primary);">Problem
+                        Analysis</span>
+                    <span class="tag" style="background: rgba(234,88,12,0.05); color: var(--text-primary);">Team
+                        Collaboration</span>
+                    <span class="tag"
+                        style="background: rgba(234,88,12,0.05); color: var(--text-primary);">Communication</span>
+                    <span class="tag" style="background: rgba(234,88,12,0.05); color: var(--text-primary);">Time
+                        Management</span>
+                    <span class="tag" style="background: rgba(234,88,12,0.05); color: var(--text-primary);">Quick
+                        Learning</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section (Split Layout) -->
-    <section id="contact" class="section contact-section">
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 60px 0 100px 0;">
         <div class="container">
-            <div class="contact-split">
-                <div class="contact-left">
-                    <h2>Get in <span style="color:var(--accent-orange)">Touch</span></h2>
-                    <p>I'm available for freelance work and full-time opportunities. Feel free to reach out.</p>
-                </div>
-                <div class="contact-right">
-                    <div class="contact-grid-2x2">
-                        <a href="mailto:rubeenariyas8@gmail.com" class="contact-card">
-                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
-                            <div class="text-box">
-                                <span class="label">Email Me</span>
-                                <span class="value">rubeenariyas8@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="tel:+918075122249" class="contact-card">
-                            <div class="icon-box"><i class="fas fa-phone"></i></div>
-                            <div class="text-box">
-                                <span class="label">Call Me</span>
-                                <span class="value">+91 8075122249</span>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/rubeena-m-r-295b76256" target="_blank"
-                            class="contact-card">
-                            <div class="icon-box"><i class="fab fa-linkedin"></i></div>
-                            <div class="text-box">
-                                <span class="label">LinkedIn</span>
-                                <span class="value">Connect</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/Rubeenariyas" target="_blank" class="contact-card">
-                            <div class="icon-box"><i class="fab fa-github"></i></div>
-                            <div class="text-box">
-                                <span class="label">GitHub</span>
-                                <span class="value">Follow Work</span>
-                            </div>
-                        </a>
+            <div class="section-head">
+                <span>Get in Touch</span>
+                <h2>Contact Me</h2>
+            </div>
+
+            <div class="contact-container">
+                <a href="mailto:rubeenariyas8@gmail.com" class="bubble-card contact-item">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted); text-transform:uppercase;">Email</div>
+                        <div style="font-weight: 500;">rubeenariyas8@gmail.com</div>
                     </div>
-                </div>
+                </a>
+
+                <a href="tel:+918075122249" class="bubble-card contact-item">
+                    <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted); text-transform:uppercase;">Phone</div>
+                        <div style="font-weight: 500;">+91 80751 22249</div>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/rubeena-mr-462991305" target="_blank" class="bubble-card contact-item">
+                    <div class="icon-circle"><i class="fab fa-linkedin"></i></div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted); text-transform:uppercase;">LinkedIn
+                        </div>
+                        <div style="font-weight: 500;">View Profile</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Rubeenariyas" target="_blank" class="bubble-card contact-item">
+                    <div class="icon-circle"><i class="fab fa-github"></i></div>
+                    <div>
+                        <div style="font-size: 0.8rem; color: var(--text-muted); text-transform:uppercase;">GitHub</div>
+                        <div style="font-weight: 500;">View Code</div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.9rem;">
+                &copy; 2025 Rubeena M R. All rights reserved.
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container"
-            style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); color: #666">
-            <p>&copy; 2025 Rubeena M R.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
