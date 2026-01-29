@@ -1393,3 +1393,160 @@ ul {
         justify-content: flex-start !important;
     }
 }
+
+/* --- Certificate Menu & Dropdown --- */
+.cert-item-glass {
+    position: relative;
+    /* Ensure absolute positioning works inside */
+    cursor: default;
+    /* Reset cursor since it's a div now */
+}
+
+/* Ensure the year doesn't overlap with menu */
+.cert-year {
+    margin-right: 30px;
+}
+
+.cert-menu-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.cert-menu-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.cert-menu-btn:hover {
+    color: var(--neon-cyan);
+}
+
+.cert-dropdown {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 20;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Show Dropdown on Click/Active Class */
+.cert-menu-container.active .cert-dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cert-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cert-dropdown ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.cert-dropdown ul li a {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.cert-dropdown ul li a:hover {
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--neon-cyan);
+    padding-left: 20px;
+    /* Slide effect */
+}
+
+/* --- Modal Styles --- */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    display: none;
+    /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 500px;
+    background: var(--glass-bg);
+    /* Use glass card style */
+    border: 1px solid var(--neon-border);
+    padding: 40px;
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--neon-orange);
+}
+
+#modal-cert-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.modal-issuer {
+    font-size: 1rem;
+    color: var(--neon-cyan);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}

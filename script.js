@@ -133,3 +133,109 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// --- Interactive Certificate Menu & Modal ---
+const certMenuBtns = document.querySelectorAll('.cert-menu-btn');
+const modal = document.getElementById('cert-modal');
+const closeModalBtn = document.querySelector('.close-modal');
+
+// Toggle Menu
+certMenuBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent closing immediately
+        const container = btn.closest('.cert-menu-container');
+
+        // Close all other open menus first
+        document.querySelectorAll('.cert-menu-container.active').forEach(activeContainer => {
+            if (activeContainer !== container) activeContainer.classList.remove('active');
+        });
+
+        container.classList.toggle('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', () => {
+    document.querySelectorAll('.cert-menu-container.active').forEach(container => {
+        container.classList.remove('active');
+    });
+});
+
+// Prevent closing when clicking inside the dropdown
+document.querySelectorAll('.cert-dropdown').forEach(dropdown => {
+    dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
+
+// Mock Data for Modal
+const certData = {
+    '1': {
+        title: 'Data Annotator',
+        issuer: 'IIB NSDC',
+        year: '2025',
+        skills: 'Data Labeling, Quality Assurance, AI Training Data',
+        description: 'Certified in data annotation techniques for machine learning models, ensuring high-quality training datasets.'
+    },
+    '2': {
+        title: 'Data Analytics',
+        issuer: 'Skillspark & ASAP',
+        year: '2025',
+        skills: 'Data Visualization, SQL, Python, Statistical Analysis',
+        description: 'Comprehensive training in data analytics, covering data cleaning, processing, and visualization using industry-standard tools.'
+    },
+    '3': {
+        title: 'College CMS Project',
+        issuer: 'Al Ameen College',
+        year: '2024',
+        skills: 'Full Stack Development, PHP, MySQL, System Design',
+        description: 'Successfully developed and deployed a College Management System, streamlining academic and administrative processes.'
+    }
+};
+
+// Open Modal logic
+const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+const modalTitle = document.getElementById('modal-cert-title');
+const modalIssuer = document.getElementById('modal-cert-issuer');
+const modalYear = document.getElementById('modal-cert-year');
+const modalSkills = document.getElementById('modal-cert-skills');
+const modalDesc = document.getElementById('modal-cert-desc');
+
+viewDetailsBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const certId = btn.getAttribute('data-id');
+        const data = certData[certId];
+
+        if (data) {
+            modalTitle.textContent = data.title;
+            modalIssuer.textContent = data.issuer;
+            modalYear.textContent = data.year;
+            modalSkills.textContent = data.skills;
+            modalDesc.textContent = data.description;
+
+            modal.classList.add('active');
+
+            // Close menu
+            document.querySelectorAll('.cert-menu-container.active').forEach(c => c.classList.remove('active'));
+        }
+    });
+});
+
+// Close Modal
+const closeModal = () => {
+    modal.classList.remove('active');
+};
+
+if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+
+// Close modal on outside click
+if (modal) {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+}
+
